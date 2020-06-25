@@ -37,7 +37,7 @@ const Heading = styled.h1`
   }
 `
 
-const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-blue-900 text-gray-100 hocus:bg-blue-700 hocus:cursor-pointer hocus:text-gray-200 focus:outline-none focus:shadow-outline`
+const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-lg! md:text-xl! sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-blue-700 text-gray-100 hocus:bg-blue-900 hocus:cursor-pointer hocus:text-gray-200 focus:outline-none focus:shadow-outline`
 
 export default ({ bgImage }) => {
   const Container = styled.div`

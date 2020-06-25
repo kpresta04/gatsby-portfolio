@@ -66,7 +66,7 @@ export default () => {
         <HeadingInfoContainer>
           <HeadingTitle>Project Portfolio</HeadingTitle>
           <HeadingDescription>
-            Here's a preview of some of my recent work.
+            Here's a overview of some of my recent work.
           </HeadingDescription>
         </HeadingInfoContainer>
 
