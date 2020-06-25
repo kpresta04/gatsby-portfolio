@@ -61,13 +61,12 @@ export default () => {
   ]
 
   return (
-    <Container>
+    <Container id="portfolio">
       <SingleColumn>
         <HeadingInfoContainer>
-          <HeadingTitle>Popular Events</HeadingTitle>
+          <HeadingTitle>Project Portfolio</HeadingTitle>
           <HeadingDescription>
-            Here are some of the most popular events in New York City curated by
-            professionals.
+            Here are the details of some of my recent work.
           </HeadingDescription>
         </HeadingInfoContainer>
 

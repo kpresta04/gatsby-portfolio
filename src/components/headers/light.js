@@ -6,7 +6,7 @@ import { css } from "styled-components/macro" //eslint-disable-line
 
 import useAnimatedNavToggler from "~/helpers/useAnimatedNavToggler.js"
 
-// import Logo from "~/images/logo.svg"
+import Logo from "~/images/logo.svg"
 import MenuIcon from "~/images/menu.svg"
 import CloseIcon from "~/images/x.svg"
 
@@ -21,15 +21,16 @@ export const NavLinks = tw.div`inline-block`
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  text-lg my-2  lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500 font-sans
+ 
 `
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
+  px-8 py-3 rounded bg-blue-700 text-gray-100
+  hocus:bg-blue-900 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `
 
@@ -78,11 +79,19 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      <NavLink className="navLink" href="/#">
+        About
+      </NavLink>
+      <NavLink className="navLink" href="/#">
+        Blog
+      </NavLink>
+      <NavLink className="navLink" href="/#">
+        Pricing
+      </NavLink>
+      <NavLink className="navLink" href="/#contact">
+        Contact Us
+      </NavLink>
+      <NavLink className="navLink" href="/#" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
@@ -95,27 +104,27 @@ export default ({
   const collapseBreakpointCss =
     collapseBreakPointCssMap[collapseBreakpointClass]
 
-  //   const defaultLogoLink = (
-  //     <LogoLink href="/">
-  //       <Logo />
-  //       Kellen Presta logo
-  //     </LogoLink>
-  //   )
+  const defaultLogoLink = (
+    <LogoLink href="/">
+      {/* <Logo /> */}
+      Kellen Presta
+    </LogoLink>
+  )
 
-  //   logoLink = logoLink || defaultLogoLink
+  logoLink = logoLink || defaultLogoLink
   links = links || defaultLinks
 
   return (
     <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
-        {/* {logoLink} */}
+        {logoLink}
         {links}
       </DesktopNavLinks>
 
       <MobileNavLinksContainer
         css={collapseBreakpointCss.mobileNavLinksContainer}
       >
-        {/* {logoLink} */}
+        {logoLink}
         <MobileNavLinks
           initial={{ x: "150%", display: "none" }}
           animate={animation}

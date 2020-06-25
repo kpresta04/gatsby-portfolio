@@ -45,10 +45,10 @@ export default () => {
     },
   ]
   return (
-    <Container>
+    <Container id="skills">
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle>Popular Blog Posts</HeadingTitle>
+          <HeadingTitle>Skill Highlights</HeadingTitle>
           <HeadingDescription>
             Some amazing blog posts that are written by even more amazing
             people.

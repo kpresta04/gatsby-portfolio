@@ -7,6 +7,7 @@ import Blog from "~/components/blogs/ThreeColSimpleWithImage.js"
 
 import ContactUsForm from "~/components/forms/SimpleContactUs.js"
 import Footer from "~/components/footers/MiniCenteredFooter.js"
+import "~/styles/globalStyles.css"
 
 export const query = graphql`
   query {

@@ -34,7 +34,7 @@ const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary
 
 export default () => {
   return (
-    <Container>
+    <Container id="contact">
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
