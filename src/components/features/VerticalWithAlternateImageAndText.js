@@ -3,6 +3,7 @@ import styled from "styled-components"
 import tw from "twin.macro"
 // import SvgDotPatternIcon from "~/images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js"
+import Img from "gatsby-image"
 
 const Container = tw.div`relative`
 
@@ -14,12 +15,11 @@ const HeadingDescription = tw.p`mt-4 font-medium text-gray-800 text-center max-w
 const Content = tw.div`mt-16`
 
 const Card = styled.div(props => [
-  tw`mt-24 md:flex justify-center items-center`,
+  tw`mt-24 md:flex justify-center`,
   props.reversed ? tw`flex-row-reverse` : "flex-row",
 ])
-const Image = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+const ImageDiv = styled.div(props => [
+  tw`relative rounded md:w-10/12 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
 ])
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
@@ -27,11 +27,10 @@ const Title = tw.h4`text-3xl font-bold text-gray-900`
 const Description = tw.p`mt-2 text-sm leading-loose`
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
-export default () => {
+export default ({ crImage, beerMeImage, gbsImage }) => {
   const cards = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+      imageSrc: crImage.childImageSharp.fluid,
       subtitle: "Paid",
       title: "Loachella, NYC",
       description:
@@ -40,8 +39,7 @@ export default () => {
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1543423924-b9f161af87e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      imageSrc: beerMeImage.childImageSharp.fluid,
       subtitle: "Free",
       title: "Rock In Rio, Upstate",
       description:
@@ -50,8 +48,7 @@ export default () => {
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+      imageSrc: gbsImage.childImageSharp.fluid,
       subtitle: "Exclusive",
       title: "Lollapalooza, Manhattan",
       description:
@@ -59,6 +56,7 @@ export default () => {
       url: "https://timerse.com",
     },
   ]
+  // console.log(crImage)
 
   return (
     <Container id="portfolio">
@@ -73,7 +71,15 @@ export default () => {
         <Content>
           {cards.map((card, i) => (
             <Card key={i} reversed={i % 2 === 1}>
-              <Image imageSrc={card.imageSrc} />
+              <ImageDiv>
+                <Img
+                  imgStyle={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  fluid={card.imageSrc}
+                />
+              </ImageDiv>
               <Details>
                 <Subtitle>{card.subtitle}</Subtitle>
                 <Title>{card.title}</Title>

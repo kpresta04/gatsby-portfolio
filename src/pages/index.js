@@ -18,12 +18,52 @@ export const query = graphql`
         }
       }
     }
+    beerMeImage: file(relativePath: { eq: "beerme14x9.png" }) {
+      childImageSharp {
+        fluid(
+          quality: 100
+          cropFocus: ATTENTION
+          maxWidth: 1400
+          maxHeight: 900
+        ) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    crImage: file(relativePath: { eq: "casino-royale.png" }) {
+      childImageSharp {
+        fluid(
+          quality: 100
+          cropFocus: ATTENTION
+          maxWidth: 1400
+          maxHeight: 900
+        ) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    gbsImage: file(relativePath: { eq: "gbs14x9.png" }) {
+      childImageSharp {
+        fluid(
+          quality: 100
+          cropFocus: ATTENTION
+          maxWidth: 1400
+          maxHeight: 900
+        ) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 export default ({ data }) => (
   <AnimationRevealPage disabled>
     <Hero bgImage={data.bgImage} />
-    <Features />
+    <Features
+      crImage={data.crImage}
+      gbsImage={data.gbsImage}
+      beerMeImage={data.beerMeImage}
+    />
     <Blog />
     <ContactUsForm />
 

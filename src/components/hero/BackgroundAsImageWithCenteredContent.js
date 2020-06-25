@@ -51,7 +51,9 @@ export default ({ bgImage }) => {
       <NavLink href="#skills">Skills</NavLink> */}
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink to="/#contact">Contact Me</PrimaryLink>
+      <PrimaryLink id="contact-button-link" to="/#contact">
+        Contact Me
+      </PrimaryLink>
     </NavLinks>,
   ]
 
@@ -66,9 +68,9 @@ export default ({ bgImage }) => {
             <br />
             bringing your projects to life.
           </Heading>
-          <PrimaryAction>
-            <Link to="#portfolio">View My Work</Link>
-          </PrimaryAction>
+          <Link to="#portfolio">
+            <PrimaryAction>View My Work</PrimaryAction>
+          </Link>
         </Content>
       </HeroContainer>
     </Container>
