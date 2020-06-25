@@ -50,7 +50,7 @@ export default ({ bgImage }) => {
       <NavLink href="#skills">Skills</NavLink> */}
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#contact">Contact Me</PrimaryLink>
+      <PrimaryLink to="/#contact">Contact Me</PrimaryLink>
     </NavLinks>,
   ]
 

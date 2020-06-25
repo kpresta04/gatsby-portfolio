@@ -9,7 +9,7 @@ import useAnimatedNavToggler from "~/helpers/useAnimatedNavToggler.js"
 import Logo from "~/images/logo.svg"
 import MenuIcon from "~/images/menu.svg"
 import CloseIcon from "~/images/x.svg"
-
+import { Link } from "gatsby"
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -20,10 +20,10 @@ export const NavLinks = tw.div`inline-block`
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a`
+export const NavLink = tw(Link)`
   text-lg my-2  lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500 font-sans
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
  
 `
 
@@ -44,7 +44,7 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none border-none bg-gray-100 text-black! hocus:text-black transition duration-300
 `
 export const MobileNavLinks = motion.custom(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
@@ -79,19 +79,19 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink className="navLink" href="/#">
+      <NavLink className="navLink" to="/#">
         About
       </NavLink>
-      <NavLink className="navLink" href="/#">
+      <NavLink className="navLink" to="/#">
         Blog
       </NavLink>
-      <NavLink className="navLink" href="/#">
+      <NavLink className="navLink" to="/#">
         Pricing
       </NavLink>
-      <NavLink className="navLink" href="/#contact">
+      <NavLink className="navLink" to="/#contact">
         Contact Us
       </NavLink>
-      <NavLink className="navLink" href="/#" tw="lg:ml-12!">
+      <NavLink className="navLink" to="/#" tw="lg:ml-12!">
         Login
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
@@ -105,7 +105,7 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoLink to="/">
       {/* <Logo /> */}
       Kellen Presta
     </LogoLink>
