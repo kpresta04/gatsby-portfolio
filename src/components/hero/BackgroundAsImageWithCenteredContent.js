@@ -2,6 +2,7 @@ import React from "react"
 import tw from "twin.macro"
 import styled from "styled-components"
 import { css } from "styled-components/macro" //eslint-disable-line
+import { Link } from "gatsby"
 
 import Header, {
   NavLink,
@@ -65,7 +66,9 @@ export default ({ bgImage }) => {
             <br />
             bringing your projects to life.
           </Heading>
-          <PrimaryAction>View My Work</PrimaryAction>
+          <PrimaryAction>
+            <Link to="#portfolio">View My Work</Link>
+          </PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
