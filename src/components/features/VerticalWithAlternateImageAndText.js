@@ -12,7 +12,7 @@ const Container = tw.div`relative w-full`
 const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center`
-const HeadingDescription = tw.p`mt-4 font-medium text-lg text-gray-800 text-center max-w-sm`
+const HeadingDescription = tw.p`mt-4 font-medium text-lg sm:text-xl text-gray-800 text-center max-w-sm`
 
 const Content = tw.div`mt-16`
 
