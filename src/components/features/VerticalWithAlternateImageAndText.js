@@ -16,6 +16,8 @@ const HeadingDescription = tw.p`mt-4 font-medium text-lg sm:text-xl text-gray-80
 
 const Content = tw.div`mt-16`
 
+const ShadowBox = tw.div`shadow-lg p-8 rounded-lg`
+
 const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer bg-gray-800 hocus:bg-gray-600 text-white text-lg`
 
 const Card = styled.div(props => [
@@ -27,7 +29,7 @@ const ImageDiv = styled.div(props => [
 ])
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
-const Title = tw.h4`text-4xl font-bold text-gray-900`
+const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0`
 const Description = tw.p`mt-2 text-base leading-loose`
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
@@ -94,36 +96,42 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
                 />
               </ImageDiv>
               <Details>
-                {/* <Subtitle>{card.subtitle}</Subtitle> */}
-                <Title>{card.title}</Title>
-                <Description>{card.description}</Description>
-                <div style={{ display: "flex" }}>
-                  <Link
-                    target="_blank"
-                    style={{ width: "100%" }}
-                    href={card.url}
-                  >
-                    <ProjButton style={{ transition: "all 233ms ease-in-out" }}>
-                      {/* <CodeSvg
+                <ShadowBox>
+                  {/* <Subtitle>{card.subtitle}</Subtitle> */}
+                  <Title>{card.title}</Title>
+                  <Description>{card.description}</Description>
+                  <div style={{ display: "flex" }}>
+                    <Link
+                      target="_blank"
+                      style={{ width: "100%" }}
+                      href={card.url}
+                    >
+                      <ProjButton
+                        style={{ transition: "all 233ms ease-in-out" }}
+                      >
+                        {/* <CodeSvg
                         style={{
                           width: "40px",
                           height: "40px",
                         }}
                       /> */}
-                      Web site
-                    </ProjButton>
-                  </Link>
-                  <Link
-                    style={{ width: "100%" }}
-                    target="_blank"
-                    href={card.gitHubLink}
-                  >
-                    <ProjButton style={{ transition: "all 233ms ease-in-out" }}>
-                      {/* <GitHubSvg style={{ width: "40px", height: "40px" }} /> */}
-                      GitHub
-                    </ProjButton>
-                  </Link>
-                </div>
+                        Web site
+                      </ProjButton>
+                    </Link>
+                    <Link
+                      style={{ width: "100%" }}
+                      target="_blank"
+                      href={card.gitHubLink}
+                    >
+                      <ProjButton
+                        style={{ transition: "all 233ms ease-in-out" }}
+                      >
+                        {/* <GitHubSvg style={{ width: "40px", height: "40px" }} /> */}
+                        GitHub
+                      </ProjButton>
+                    </Link>
+                  </div>
+                </ShadowBox>
               </Details>
             </Card>
           ))}

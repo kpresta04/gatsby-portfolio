@@ -58,7 +58,12 @@ export default ({ bgImage }) => {
   ]
 
   return (
-    <Container>
+    <Container
+      style={{
+        clipPath: "polygon(0 0, 100% 0, 100% 80vh, 0 100%)",
+        WebkitClipPath: "polygon(0 0, 100% 0, 100% 80vh, 0 100%)",
+      }}
+    >
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
