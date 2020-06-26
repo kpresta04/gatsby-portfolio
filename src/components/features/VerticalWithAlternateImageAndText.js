@@ -46,7 +46,7 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
     {
       imageSrc: beerMeImage.childImageSharp.fluid,
       subtitle: "Free",
-      title: "Beer Me",
+      title: "Brewery Finder",
       description:
         "VanillaJS app for finding breweries in any area. Utilizes Mapbox with Foursquare API and Bulma CSS.",
       url: "https://kpresta04.github.io/beerme",
@@ -120,7 +120,7 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
                   >
                     <ProjButton style={{ transition: "all 233ms ease-in-out" }}>
                       {/* <GitHubSvg style={{ width: "40px", height: "40px" }} /> */}
-                      View On GitHub
+                      GitHub
                     </ProjButton>
                   </Link>
                 </div>
