@@ -30,13 +30,14 @@ export const query = graphql`
         }
       }
     }
-    crImage: file(relativePath: { eq: "casino-royale.png" }) {
+    crImage: file(relativePath: { eq: "casinoBlackjack.png" }) {
       childImageSharp {
         fluid(
           quality: 100
           cropFocus: ATTENTION
           maxWidth: 1400
           maxHeight: 900
+          webpQuality: 100
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
@@ -49,6 +50,7 @@ export const query = graphql`
           cropFocus: ATTENTION
           maxWidth: 1400
           maxHeight: 900
+          webpQuality: 100
         ) {
           ...GatsbyImageSharpFluid_withWebp
         }
