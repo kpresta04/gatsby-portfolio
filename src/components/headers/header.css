@@ -1,3 +1,11 @@
 .navLink {
   font-family: Helvetica !important;
 }
+/* #logoLink {
+  height: 6rem;
+  transition: all 0.3s;
+  font-weight: 400 !important;
+}
+#logoLink:hover {
+  color: red !important;
+} */

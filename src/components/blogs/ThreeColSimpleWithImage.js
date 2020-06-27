@@ -8,8 +8,8 @@ const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap`
 const Column = tw.div`mt-24 lg:w-1/3`
 
-const HeadingInfoContainer = tw.div`flex flex-col items-center`
-const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`
+const HeadingInfoContainer = tw.div`flex flex-col items-center text-white`
+const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-white text-lg text-center max-w-sm`
 
 const Card = tw.div`lg:mx-4 xl:mx-8 max-w-sm lg:max-w-xs`
 const Image = styled.div(props => [
@@ -45,8 +45,14 @@ export default () => {
     },
   ]
   return (
-    <Container id="skills">
-      <Content>
+    <Container
+      id="skills"
+      style={{
+        backgroundImage: "linear-gradient(to right bottom, #1a64b5, #4981d5)",
+        transform: "skewY(-5deg)",
+      }}
+    >
+      <Content style={{ transform: "skewY(5deg)" }}>
         <HeadingInfoContainer>
           <HeadingTitle>Skill Highlights</HeadingTitle>
           <HeadingDescription>

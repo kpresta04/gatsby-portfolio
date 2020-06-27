@@ -35,7 +35,7 @@ export const PrimaryLink = tw(NavLink)`
 `
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! md:text-5xl! ml-0!`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -105,9 +105,17 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
-    <LogoLink to="/">
+    <LogoLink
+      id="logoLink"
+      style={{
+        fontFamily: "Monoton, cursive",
+        fontWeight: "400",
+        transition: "all 0.3s",
+      }}
+      to="/"
+    >
       {/* <Logo /> */}
-      Kellen Presta
+      KP
     </LogoLink>
   )
 
