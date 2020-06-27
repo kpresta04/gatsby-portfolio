@@ -120,9 +120,9 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
                       </ProjButton>
                     </Link>
                     <Link
-                      rel="noopener"
                       style={{ width: "100%" }}
                       target="_blank"
+                      rel="noopener"
                       href={card.gitHubLink}
                     >
                       <ProjButton
