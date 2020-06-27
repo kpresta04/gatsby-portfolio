@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js"
 
 const Container = tw.div`relative`
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
-const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap`
-const Column = tw.div`mt-24 lg:w-1/3`
+const Content = tw.div`w-full max-w-screen-xl mx-auto py-20 lg:py-24`
+const ThreeColumn = tw.div`w-full flex flex-col items-center lg:flex-row flex-wrap`
+const Column = tw.div`mt-24`
 
 const HeadingInfoContainer = tw.div`flex flex-col items-center text-white`
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-white text-lg text-center max-w-sm`
@@ -43,6 +43,13 @@ export default () => {
       title: "This female band is making buzz all over the world",
       url: "https://timerse.com",
     },
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
+      category: "Event Tips",
+      title: "Finding Amazing Events Near You - Fast, Cheap & Free",
+      url: "https://timerse.com",
+    },
   ]
   return (
     <Container
@@ -67,7 +74,9 @@ export default () => {
                 <Image imageSrc={post.imageSrc} />
                 <Category>{post.category}</Category>
                 <Title>{post.title}</Title>
-                <Link href={post.url}>Read Post</Link>
+                <Link rel="noopener" href={post.url}>
+                  Read Post
+                </Link>
               </Card>
             </Column>
           ))}

@@ -102,6 +102,7 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
                   <Description>{card.description}</Description>
                   <div style={{ display: "flex" }}>
                     <Link
+                      rel="noopener"
                       target="_blank"
                       style={{ width: "100%" }}
                       href={card.url}
@@ -119,6 +120,7 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
                       </ProjButton>
                     </Link>
                     <Link
+                      rel="noopener"
                       style={{ width: "100%" }}
                       target="_blank"
                       href={card.gitHubLink}
