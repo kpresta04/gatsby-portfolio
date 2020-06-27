@@ -55,11 +55,15 @@ export default () => {
     <Container
       id="skills"
       style={{
-        backgroundImage: "linear-gradient(to right bottom, #1a64b5, #4981d5)",
-        transform: "skewY(-5deg)",
+        // backgroundImage: "linear-gradient(to right bottom, #1a64b5, #4981d5)",
+
+        background:
+          "linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%)",
+
+        transform: "skewY(-7deg)",
       }}
     >
-      <Content style={{ transform: "skewY(5deg)" }}>
+      <Content style={{ transform: "skewY(7deg)" }}>
         <HeadingInfoContainer>
           <HeadingTitle>Skill Highlights</HeadingTitle>
           <HeadingDescription>
