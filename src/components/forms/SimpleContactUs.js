@@ -42,7 +42,7 @@ export default () => {
             <div tw="mx-auto max-w-4xl">
               <h2>Contact Me</h2>
               <h4>
-                Use the form below or send an{" "}
+                Use the form below or send me an{" "}
                 <a
                   style={{ color: "black" }}
                   target="_blank"
