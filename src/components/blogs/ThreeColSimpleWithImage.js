@@ -4,15 +4,15 @@ import styled from "styled-components"
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js"
 import "./skills.css"
 
-const Container = tw.div`relative min-h-screen`
+const Container = tw.div`relative min-h-screen -mx-8 mt-8 lg:mt-0`
 const Content = tw.div`w-full max-w-screen-xl mx-auto pt-8 pb-20`
-const ThreeColumn = tw.div`w-full flex flex-col items-center lg:flex-row flex-wrap`
+const ThreeColumn = tw.div`w-full flex flex-row flex-wrap justify-center`
 const Column = tw.div`mt-24`
 
-const HeadingInfoContainer = tw.div`flex flex-col items-center text-white`
+const HeadingInfoContainer = tw.div`flex w-full flex-col items-center text-white`
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-white text-lg text-center max-w-sm`
 
-const Card = tw.div`lg:mx-4 xl:mx-8 max-w-sm lg:max-w-xs`
+const Card = tw.div` mx-auto sm:mx-4 max-w-sm lg:max-w-xs`
 const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`bg-cover bg-center h-80 lg:h-64 rounded`,
