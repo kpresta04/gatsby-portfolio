@@ -6,7 +6,7 @@ import "./skills.css"
 
 const Container = tw.div`relative min-h-screen -mx-8 mt-8 lg:mt-0`
 const Content = tw.div`w-full max-w-screen-xl mx-auto pt-8 pb-20`
-const ThreeColumn = tw.div`w-full flex flex-row flex-wrap justify-center`
+const ThreeColumn = tw.div`w-full flex flex-row flex-wrap justify-center md:pb-20`
 const Column = tw.div`mt-24`
 
 const HeadingInfoContainer = tw.div`flex w-full flex-col items-center text-white`
