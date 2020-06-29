@@ -59,6 +59,7 @@ export default ({ bgImage }) => {
 
   return (
     <Container
+      id="home"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% 80vh, 0 100%)",
         WebkitClipPath: "polygon(0 0, 100% 0, 100% 80vh, 0 100%)",
