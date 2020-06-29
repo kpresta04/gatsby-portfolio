@@ -56,6 +56,34 @@ export const query = graphql`
         }
       }
     }
+    network: file(relativePath: { eq: "network.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    iot: file(relativePath: { eq: "iot.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    crypto: file(relativePath: { eq: "crypto.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    web_dev: file(relativePath: { eq: "web_dev.png" }) {
+      childImageSharp {
+        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 export default ({ data }) => (
@@ -66,7 +94,12 @@ export default ({ data }) => (
       gbsImage={data.gbsImage}
       beerMeImage={data.beerMeImage}
     />
-    <Blog />
+    <Blog
+      iot={data.iot}
+      crypto={data.crypto}
+      network={data.network}
+      web_dev={data.web_dev}
+    />
     <ContactUsForm />
 
     <Footer />
