@@ -43,6 +43,19 @@ export const query = graphql`
         }
       }
     }
+    simmonsImage: file(relativePath: { eq: "simmons.png" }) {
+      childImageSharp {
+        fluid(
+          quality: 100
+          cropFocus: CENTER
+          maxWidth: 1400
+          maxHeight: 900
+          webpQuality: 100
+        ) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     gbsImage: file(relativePath: { eq: "gbs14x9.png" }) {
       childImageSharp {
         fluid(
@@ -58,29 +71,29 @@ export const query = graphql`
     }
     network: file(relativePath: { eq: "network.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
-          ...GatsbyImageSharpFluid_withWebp
+        fixed(quality: 100, cropFocus: CENTER, width: 336, height: 221) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
     iot: file(relativePath: { eq: "iot.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
-          ...GatsbyImageSharpFluid_withWebp
+        fixed(quality: 100, cropFocus: CENTER, width: 336, height: 221) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
     crypto: file(relativePath: { eq: "crypto.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
-          ...GatsbyImageSharpFluid_withWebp
+        fixed(quality: 100, cropFocus: CENTER, width: 336, height: 221) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
     web_dev: file(relativePath: { eq: "web_dev.png" }) {
       childImageSharp {
-        fluid(quality: 100, cropFocus: CENTER, maxWidth: 336, maxHeight: 221) {
-          ...GatsbyImageSharpFluid_withWebp
+        fixed(quality: 100, cropFocus: CENTER, width: 336, height: 221) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
@@ -93,6 +106,7 @@ export default ({ data }) => (
       crImage={data.crImage}
       gbsImage={data.gbsImage}
       beerMeImage={data.beerMeImage}
+      simmonsImage={data.simmonsImage}
     />
     <Blog
       iot={data.iot}

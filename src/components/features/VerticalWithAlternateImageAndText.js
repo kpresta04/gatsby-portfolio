@@ -33,7 +33,7 @@ const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0`
 const Description = tw.p`mt-2 text-base leading-loose`
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
-export default ({ crImage, beerMeImage, gbsImage }) => {
+export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
   const cards = [
     {
       imageSrc: crImage.childImageSharp.fluid,
@@ -43,6 +43,15 @@ export default ({ crImage, beerMeImage, gbsImage }) => {
         "A casino web app, built in MERN with Redux and Firebase. Buy chips and try to beat the house! Implemented Blackjack and Slots.",
       url: "https://casino-royale-9c472.web.app/",
       gitHubLink: "https://github.com/kpresta04/casino-royale",
+    },
+    {
+      imageSrc: simmonsImage.childImageSharp.fluid,
+      subtitle: "Paid",
+      title: "Simmons Gun Repair",
+      description:
+        "E-commerce freelance project commissioned by a local business. Features a custom forefront with Shopify headless CMS.",
+      url: "https://peaceful-turing-1274a7.netlify.app/",
+      gitHubLink: "https://github.com/kpresta04/simmons-gatsby",
     },
 
     {

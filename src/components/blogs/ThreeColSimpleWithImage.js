@@ -12,13 +12,13 @@ const Column = tw.div`mt-24`
 const HeadingInfoContainer = tw.div`flex w-full flex-col items-center text-white`
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-white text-lg text-center max-w-sm`
 
-const Card = tw.div` mx-auto sm:mx-4 max-w-sm lg:max-w-xs`
+const Card = tw.div`mx-4`
 const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`bg-cover bg-center h-80 lg:h-64 rounded`,
 ])
 const Category = tw.div`mt-4 text-secondary-100 font-bold text-sm`
-const Title = tw.h4`mt-2 leading-relaxed font-bold text-lg`
+const Title = tw.h4`mt-2 leading-relaxed font-bold text-lg uppercase`
 const Link = tw.a`inline-block mt-2 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 const Stripes = styled.div`
   position: absolute;
@@ -52,46 +52,55 @@ const Stripes = styled.div`
   );
 `
 export default ({ crypto, iot, web_dev, network }) => {
-  console.log(network)
-  const blogPosts = [
+  const skills = [
     {
       imageName: "crypto.jpg",
-      imageSrc: crypto.childImageSharp.fluid.src,
+      imageSrc: web_dev.childImageSharp.fixed.src,
+      skillTitles: [
+        " React",
+        "Styled Components",
+        " JavaScript",
+        "CSS3 | SASS",
+        "HTML 5",
+      ],
 
       // imageSrc:
       //   "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Event Tips",
-      title: "Finding Amazing Events Near You - Fast, Cheap & Free",
+      title: "Front End",
       url: "https://timerse.com",
     },
     {
       imageName: "network.jpg",
-      imageSrc: network.childImageSharp.fluid.src,
+      imageSrc: network.childImageSharp.fixed.src,
+      skillTitles: ["GatsbyJS", "Node", "Express", "Python", "Redux"],
 
       // imageSrc:
       //   "https://images.unsplash.com/photo-1543365067-fa127bcb2303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Reviews",
-      title: "The Top Rated Musical Concerts Worldwide in 2019",
+      title: "Back End",
       url: "https://reddit.com",
     },
     {
       imageName: "iot.jpg",
-      imageSrc: iot.childImageSharp.fluid.src,
+      imageSrc: iot.childImageSharp.fixed.src,
+      skillTitles: ["GraphQL", "PostgreSQL", "MySQL", "MongoDB", "Jest"],
 
       // imageSrc:
       //   "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
       category: "Discover",
-      title: "This female band is making buzz all over the world",
+      title: "Database",
       url: "https://timerse.com",
     },
     {
       imageName: "web_dev.png",
-      imageSrc: web_dev.childImageSharp.fluid.src,
+      imageSrc: crypto.childImageSharp.fixed.src,
+      skillTitles: ["Netlify", "Shopify", "Heroku", "Firebase", "Git"],
 
       // imageSrc:
       //   "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Event Tips",
-      title: "Finding Amazing Events Near You - Fast, Cheap & Free",
+      title: "Deployment",
       url: "https://timerse.com",
     },
   ]
@@ -114,15 +123,19 @@ export default ({ crypto, iot, web_dev, network }) => {
           </HeadingDescription> */}
         </HeadingInfoContainer>
         <ThreeColumn>
-          {blogPosts.map((post, index) => (
+          {skills.map((skill, index) => (
             <Column key={index}>
               <Card>
-                <Image imageSrc={post.imageSrc} />
-                <Category>{post.category}</Category>
-                <Title>{post.title}</Title>
-                <Link rel="noopener" href={post.url}>
-                  Read Post
-                </Link>
+                <Image
+                  style={{ width: "336px", height: "221px" }}
+                  imageSrc={skill.imageSrc}
+                />
+                <Title>{skill.title}</Title>
+                <ul style={{ listStyleType: "none", paddingInlineStart: "0" }}>
+                  {skill.skillTitles.map((el, i) => (
+                    <li key={i}>{el}</li>
+                  ))}
+                </ul>
               </Card>
             </Column>
           ))}
