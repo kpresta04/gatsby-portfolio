@@ -7,7 +7,7 @@ const Container = tw.div`relative mx-auto`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 
 const FormContainer = styled.div`
-  ${tw`p-10 sm:p-12 md:p-16 text-gray-100 rounded-lg relative text-black`}
+  ${tw`w-full text-gray-100 rounded-lg relative text-black`}
   form {
     ${tw`mt-4`}
   }

@@ -69,5 +69,5 @@
     color-stop(80%, #fff),
     to(#f5fafd)
   );
-  background: linear-gradient(100grad, #fff 80%, #f5fafd);
+  background: linear-gradient(100grad, #fff 20%, #6ca2de);
 }
