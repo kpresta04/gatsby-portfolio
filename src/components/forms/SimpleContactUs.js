@@ -16,7 +16,7 @@ const FormContainer = styled.div`
   }
   input,
   textarea {
-    ${tw`w-full border-r-0 border-l-0 border-t-0 border-b-4 hocus:border-blue-600 hocus:border-solid text-base font-medium tracking-wide  p-4 hocus:outline-none! transition duration-200`};
+    ${tw`w-full border-r-0 border-l-0 border-t-0 border-b-4  border-transparent hocus:border-blue-600 border-solid text-base font-medium tracking-wide  p-4 hocus:outline-none! transition duration-200`};
 
     ::placeholder {
       ${tw`text-gray-500`}
