@@ -54,6 +54,7 @@ const Stripes = styled.div`
 export default () => {
   const blogPosts = [
     {
+      imageName: "crypto.jpg",
       imageSrc:
         "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Event Tips",
@@ -61,6 +62,8 @@ export default () => {
       url: "https://timerse.com",
     },
     {
+      imageName: "network.jpg",
+
       imageSrc:
         "https://images.unsplash.com/photo-1543365067-fa127bcb2303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Reviews",
@@ -68,6 +71,8 @@ export default () => {
       url: "https://reddit.com",
     },
     {
+      imageName: "iot.jpg",
+
       imageSrc:
         "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
       category: "Discover",
@@ -75,6 +80,8 @@ export default () => {
       url: "https://timerse.com",
     },
     {
+      imageName: "web_dev.png",
+
       imageSrc:
         "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Event Tips",
@@ -95,10 +102,10 @@ export default () => {
       <Content style={{ zIndex: "1" }}>
         <HeadingInfoContainer>
           <HeadingTitle>Skill Highlights</HeadingTitle>
-          <HeadingDescription style={{ color: "#1d1d5c" }}>
+          {/* <HeadingDescription style={{ color: "#1d1d5c" }}>
             Some amazing blog posts that are written by even more amazing
             people.
-          </HeadingDescription>
+          </HeadingDescription> */}
         </HeadingInfoContainer>
         <ThreeColumn>
           {blogPosts.map((post, index) => (
