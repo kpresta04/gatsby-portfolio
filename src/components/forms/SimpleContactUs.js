@@ -40,7 +40,7 @@ export default () => {
   return (
     <Container id="contact">
       <Content>
-        <ShadowBox style={{ backgroundColor: "#edf2f7" }}>
+        <ShadowBox style={{ backgroundColor: "rgb(223, 230, 236)" }}>
           <FormContainer>
             <div tw="mx-auto max-w-4xl">
               <h2>Contact Me</h2>
