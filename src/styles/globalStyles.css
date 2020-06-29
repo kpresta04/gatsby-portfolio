@@ -41,3 +41,8 @@ button {
 #contact-button-link:hover {
   text-decoration: none;
 }
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}

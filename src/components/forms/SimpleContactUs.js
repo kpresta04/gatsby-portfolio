@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import tw from "twin.macro"
 import { css } from "styled-components/macro" //eslint-disable-line
+import "./form.css"
 
 const Container = tw.div`relative mx-auto`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
@@ -27,12 +28,12 @@ const FormContainer = styled.div`
 const BlueSpan = tw.span`text-blue-500`
 
 const ShadowBox = tw.div`p-8 shadow-xl rounded`
-const TwoColumn = tw.div`flex flex-col sm:flex-row justify-between`
+const TwoColumn = tw.div`flex flex-col sm:flex-row justify-between items-center`
 const Column = tw.div`sm:w-5/12 flex flex-col`
 const InputContainer = tw.div`relative py-5 mt-6`
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-base mb-4`
 const Input = tw.input`shadow-md rounded border-none bg-white`
-const TextArea = tw.textarea`h-24 sm:h-full resize-none rounded border-none bg-white`
+const TextArea = tw.textarea`h-64 resize-none rounded border-none bg-white`
 const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-700 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-900 cursor-pointer hocus:-translate-y-px hocus:shadow-xl`
 
 export default () => {
@@ -60,6 +61,7 @@ export default () => {
                     <InputContainer>
                       <Label htmlFor="name-input">Your Name</Label>
                       <Input
+                        style={{ minWidth: "300px" }}
                         id="name-input"
                         type="text"
                         name="name"
@@ -69,6 +71,7 @@ export default () => {
                     <InputContainer>
                       <Label htmlFor="email-input">Your Email Address</Label>
                       <Input
+                        style={{ minWidth: "300px" }}
                         id="email-input"
                         type="email"
                         name="email"
@@ -76,10 +79,11 @@ export default () => {
                       />
                     </InputContainer>
                   </Column>
-                  <Column>
+                  <Column tw="md:mr-12">
                     <InputContainer tw="flex-1">
                       <Label htmlFor="name-input">Your Message</Label>
                       <TextArea
+                        style={{ minWidth: "300px" }}
                         id="message-input"
                         name="message"
                         placeholder="Message"
