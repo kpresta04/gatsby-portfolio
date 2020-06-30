@@ -49,7 +49,7 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
       subtitle: "Paid",
       title: "Simmons Gun Repair",
       description:
-        "E-commerce freelance project commissioned by a local business. Features a custom forefront with Shopify headless CMS.",
+        "E-commerce freelance project commissioned by a local business. Features a custom storefront with Shopify headless CMS.",
       url: "https://peaceful-turing-1274a7.netlify.app/",
       gitHubLink: "https://github.com/kpresta04/simmons-gatsby",
     },

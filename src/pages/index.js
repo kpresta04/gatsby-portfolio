@@ -43,7 +43,7 @@ export const query = graphql`
         }
       }
     }
-    simmonsImage: file(relativePath: { eq: "simmons.png" }) {
+    simmonsImage: file(relativePath: { eq: "simmons2.png" }) {
       childImageSharp {
         fluid(
           quality: 100

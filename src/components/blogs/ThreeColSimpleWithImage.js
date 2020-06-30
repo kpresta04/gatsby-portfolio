@@ -116,7 +116,7 @@ export default ({ crypto, iot, web_dev, network }) => {
 
       <Content style={{ zIndex: "1" }}>
         <HeadingInfoContainer>
-          <HeadingTitle>Skill Highlights</HeadingTitle>
+          <HeadingTitle>Skills</HeadingTitle>
           {/* <HeadingDescription style={{ color: "#1d1d5c" }}>
             Some amazing blog posts that are written by even more amazing
             people.
