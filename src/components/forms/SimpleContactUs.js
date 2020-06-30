@@ -55,7 +55,13 @@ export default () => {
                   <BlueSpan>email.</BlueSpan>
                 </a>
               </h4>
-              <form action="#">
+              <form
+                data-netlify="true"
+                type="submit"
+                onSubmit={e => {
+                  e.preventDefault()
+                }}
+              >
                 <TwoColumn>
                   <Column>
                     <InputContainer>
