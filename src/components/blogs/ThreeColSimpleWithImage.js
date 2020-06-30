@@ -18,7 +18,7 @@ const Image = styled.div(props => [
   tw`bg-cover bg-center h-80 lg:h-64 rounded`,
 ])
 const Category = tw.div`mt-4 text-secondary-100 font-bold text-sm`
-const Title = tw.h4`mt-2 leading-relaxed font-bold text-lg uppercase`
+const Title = tw.h4`mt-2 mx-auto leading-relaxed text-lg`
 const Link = tw.a`inline-block mt-2 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 const Stripes = styled.div`
   position: absolute;
@@ -130,8 +130,29 @@ export default ({ crypto, iot, web_dev, network }) => {
                   style={{ width: "336px", height: "221px" }}
                   imageSrc={skill.imageSrc}
                 />
-                <Title>{skill.title}</Title>
-                <ul style={{ listStyleType: "none", paddingInlineStart: "0" }}>
+                <Title
+                  style={{
+                    color: "white",
+                    backgroundColor: "#1a64b5",
+                    width: "80%",
+                    textAlign: "center",
+                    justifySelf: "center",
+                    fontWeight: "400",
+                    fontSize: "1.6rem",
+                    transform: "translateY(-70%)",
+                  }}
+                >
+                  {skill.title}
+                </Title>
+                <ul
+                  style={{
+                    listStyleType: "none",
+                    paddingInlineStart: "0",
+                    textAlign: "center",
+                    lineHeight: "1.7",
+                    fontSize: "1.3rem",
+                  }}
+                >
                   {skill.skillTitles.map((el, i) => (
                     <li key={i}>{el}</li>
                   ))}
