@@ -59,9 +59,9 @@ export default () => {
                 data-netlify="true"
                 type="submit"
                 method="POST"
-                onSubmit={e => {
-                  e.preventDefault()
-                }}
+                // onSubmit={e => {
+                //   e.preventDefault()
+                // }}
               >
                 <TwoColumn>
                   <Column>
