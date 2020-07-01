@@ -31,7 +31,7 @@ export const PrimaryLink = tw(NavLink)`
   lg:mx-0
   px-8 py-3 rounded bg-blue-700 text-gray-100
   hocus:bg-blue-900 hocus:text-gray-200 focus:shadow-outline
-  border-b-0
+  border-b-0 mr-8!
 `
 
 export const LogoLink = styled(NavLink)`
