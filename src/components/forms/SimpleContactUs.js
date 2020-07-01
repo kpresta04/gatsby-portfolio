@@ -60,6 +60,7 @@ export default () => {
                 data-netlify="true"
                 method="POST"
                 data-netlify-honeypot="bot-field"
+                action="/form"
                 // onSubmit={e => {
                 //   e.preventDefault()
                 // }}
