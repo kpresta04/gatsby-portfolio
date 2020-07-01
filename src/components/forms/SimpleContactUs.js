@@ -56,6 +56,7 @@ export default () => {
                 </a>
               </h4>
               <form
+                name="contact"
                 data-netlify="true"
                 type="submit"
                 method="POST"
