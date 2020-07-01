@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-export default function form(props) {
+export default function Form(props) {
   useEffect(() => {
     setTimeout(() => {
       props.history.push("/")
