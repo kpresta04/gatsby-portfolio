@@ -4,6 +4,7 @@ import AnimationRevealPage from "~/helpers/AnimationRevealPage.js"
 import Hero from "~/components/hero/BackgroundAsImageWithCenteredContent.js"
 import Features from "~/components/features/VerticalWithAlternateImageAndText.js"
 import Blog from "~/components/blogs/ThreeColSimpleWithImage.js"
+import { Helmet } from "react-helmet"
 
 import ContactUsForm from "~/components/forms/SimpleContactUs.js"
 import Footer from "~/components/footers/MiniCenteredFooter.js"
@@ -101,6 +102,10 @@ export const query = graphql`
 `
 export default ({ data }) => (
   <AnimationRevealPage disabled>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Kellen Presta</title>
+    </Helmet>
     <Hero bgImage={data.bgImage} />
     <Features
       crImage={data.crImage}
