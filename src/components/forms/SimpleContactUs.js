@@ -58,7 +58,6 @@ export default () => {
               <form
                 name="contact"
                 data-netlify="true"
-                type="submit"
                 method="POST"
                 // onSubmit={e => {
                 //   e.preventDefault()
