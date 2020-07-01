@@ -60,7 +60,7 @@ export default () => {
                 data-netlify="true"
                 method="POST"
                 data-netlify-honeypot="bot-field"
-                action="/form"
+
                 // onSubmit={e => {
                 //   e.preventDefault()
                 // }}
@@ -72,6 +72,7 @@ export default () => {
                       <Label htmlFor="name-input">Your Name</Label>
                       <Input
                         style={{ minWidth: "300px" }}
+                        required
                         id="name-input"
                         type="text"
                         name="name"
@@ -81,6 +82,7 @@ export default () => {
                     <InputContainer>
                       <Label htmlFor="email-input">Your Email Address</Label>
                       <Input
+                        required
                         style={{ minWidth: "300px" }}
                         id="email-input"
                         type="email"
@@ -93,6 +95,7 @@ export default () => {
                     <InputContainer tw="flex-1">
                       <Label htmlFor="name-input">Your Message</Label>
                       <TextArea
+                        required
                         style={{ minWidth: "300px" }}
                         id="message-input"
                         name="message"
