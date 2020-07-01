@@ -87,7 +87,7 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
         <HeadingInfoContainer>
           <HeadingTitle>Project Portfolio</HeadingTitle>
           <HeadingDescription>
-            Here's a overview of some of my recent work.
+            Here's an overview of some of my recent work.
           </HeadingDescription>
         </HeadingInfoContainer>
 
