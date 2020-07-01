@@ -59,10 +59,12 @@ export default () => {
                 name="contact"
                 data-netlify="true"
                 method="POST"
+                data-netlify-honeypot="bot-field"
                 // onSubmit={e => {
                 //   e.preventDefault()
                 // }}
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <TwoColumn>
                   <Column>
                     <InputContainer>
