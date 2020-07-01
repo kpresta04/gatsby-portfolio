@@ -25,11 +25,11 @@ const Card = styled.div(props => [
   props.reversed ? tw`flex-row-reverse` : "flex-row",
 ])
 const ImageDiv = styled.div(props => [
-  tw`relative rounded md:w-6/12 lg:w-5/12 flex-shrink-0 h-80 md:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+  tw`relative rounded md:w-6/12 lg:w-5/12 flex-shrink-0 md:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
 ])
-const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+const Details = tw.div`mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
-const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0`
+const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0 text-center`
 const Description = tw.p`mt-2 text-base leading-loose`
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
