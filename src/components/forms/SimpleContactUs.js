@@ -91,7 +91,7 @@ export default () => {
                       />
                     </InputContainer>
                   </Column>
-                  <Column tw="md:mr-12">
+                  <Column tw="md:mr-16 lg:mr-20">
                     <InputContainer tw="flex-1">
                       <Label htmlFor="name-input">Your Message</Label>
                       <TextArea

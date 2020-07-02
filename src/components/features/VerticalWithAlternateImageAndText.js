@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import CodeSvg from "~/images/code.svg"
 import GitHubSvg from "~/images/github.svg"
 
-const Container = tw.div`relative w-full`
+const Container = tw.div`relative w-full mb-12`
 
 const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
 
@@ -16,22 +16,22 @@ const HeadingDescription = tw.p`mt-4 font-medium text-lg sm:text-xl text-gray-80
 
 const Content = tw.div`mt-16`
 
-const ShadowBox = tw.div`shadow-lg p-8 rounded-lg`
+const ShadowBox = tw.div`shadow-lg p-10 rounded-lg`
 
-const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer bg-gray-800 hocus:bg-gray-600 text-white text-lg`
+const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer bg-gray-800 hocus:bg-gray-600 text-white text-lg `
 
 const Card = styled.div(props => [
-  tw`mt-24 md:flex justify-center`,
+  tw`mt-24 lg:mt-48 xl:mt-24 md:flex justify-center flex-wrap p-4`,
   props.reversed ? tw`flex-row-reverse` : "flex-row",
 ])
 const ImageDiv = styled.div(props => [
-  tw`relative rounded md:w-6/12 lg:w-5/12 flex-shrink-0 md:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+  tw`relative rounded md:w-8/12 lg:w-5/12 flex-shrink-0 xl:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
 ])
-const Details = tw.div`mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+const Details = tw.div`mt-0  md:w-8/12 lg:w-5/12 mx-4 sm:mx-8 md:mx-4 lg:mx-8 shadow-lg`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
-const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0 text-center`
+const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0 text-center pt-12`
 const Description = tw.p`mt-2 text-base leading-loose`
-const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
+const Link = tw.a`flex justify-center items-center hocus:no-underline mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
 export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
   const cards = [
@@ -105,44 +105,52 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
                 />
               </ImageDiv>
               <Details>
-                <ShadowBox>
-                  {/* <Subtitle>{card.subtitle}</Subtitle> */}
-                  <Title>{card.title}</Title>
-                  <Description>{card.description}</Description>
-                  <div style={{ display: "flex" }}>
-                    <Link
-                      rel="noopener"
-                      target="_blank"
-                      style={{ width: "100%" }}
-                      href={card.url}
+                {/* <ShadowBox> */}
+                {/* <Subtitle>{card.subtitle}</Subtitle> */}
+
+                <Title>{card.title}</Title>
+
+                <Description>{card.description}</Description>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <Link
+                    rel="noopener"
+                    target="_blank"
+                    style={{ width: "100%" }}
+                    href={card.url}
+                  >
+                    <ProjButton
+                      style={{
+                        transition: "all 233ms ease-in-out",
+                        maxWidth: "12rem",
+                      }}
                     >
-                      <ProjButton
-                        style={{ transition: "all 233ms ease-in-out" }}
-                      >
-                        {/* <CodeSvg
+                      {/* <CodeSvg
                         style={{
                           width: "40px",
                           height: "40px",
                         }}
                       /> */}
-                        Web site
-                      </ProjButton>
-                    </Link>
-                    <Link
-                      style={{ width: "100%" }}
-                      target="_blank"
-                      rel="noopener"
-                      href={card.gitHubLink}
+                      Web site
+                    </ProjButton>
+                  </Link>
+                  <Link
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    rel="noopener"
+                    href={card.gitHubLink}
+                  >
+                    <ProjButton
+                      style={{
+                        transition: "all 233ms ease-in-out",
+                        maxWidth: "12rem",
+                      }}
                     >
-                      <ProjButton
-                        style={{ transition: "all 233ms ease-in-out" }}
-                      >
-                        {/* <GitHubSvg style={{ width: "40px", height: "40px" }} /> */}
-                        GitHub
-                      </ProjButton>
-                    </Link>
-                  </div>
-                </ShadowBox>
+                      {/* <GitHubSvg style={{ width: "40px", height: "40px" }} /> */}
+                      GitHub
+                    </ProjButton>
+                  </Link>
+                </div>
+                {/* </ShadowBox> */}
               </Details>
             </Card>
           ))}

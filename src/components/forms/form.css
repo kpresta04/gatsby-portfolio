@@ -1,3 +1,14 @@
+@media screen and (min-width: 768px) {
+  #message-input {
+    min-width: 350px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #message-input {
+    min-width: 450px !important;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   #message-input {
     min-width: 500px !important;
