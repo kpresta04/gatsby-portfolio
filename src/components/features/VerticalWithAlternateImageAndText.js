@@ -21,16 +21,16 @@ const ShadowBox = tw.div`shadow-lg p-10 rounded-lg`
 const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer bg-gray-800 hocus:bg-gray-600 text-white text-lg `
 
 const Card = styled.div(props => [
-  tw`mt-24 lg:mt-48 xl:mt-24 md:flex justify-center flex-wrap p-4`,
+  tw`mt-24 lg:mt-48 xl:mt-24 md:flex justify-center flex-wrap`,
   props.reversed ? tw`flex-row-reverse` : "flex-row",
 ])
 const ImageDiv = styled.div(props => [
-  tw`relative rounded md:w-8/12 lg:w-5/12 flex-shrink-0 xl:h-144  bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`,
+  tw`relative rounded md:w-8/12 lg:w-5/12 flex-shrink-0 xl:h-144  bg-cover bg-center`,
 ])
-const Details = tw.div`mt-0  md:w-8/12 lg:w-5/12 mx-4 sm:mx-8 md:mx-4 lg:mx-8 shadow-lg`
+const Details = tw.div`mt-0  md:w-8/12 lg:w-5/12 shadow-lg`
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
-const Title = tw.h4`text-4xl font-bold text-gray-900 mt-0 text-center pt-12`
-const Description = tw.p`mt-2 text-base leading-loose`
+const Title = tw.h4`text-4xl font-bold text-gray-900 m-0 text-center pt-12 lg:pt-0 xl:pt-12`
+const Description = tw.p`mt-2 text-base leading-loose p-8`
 const Link = tw.a`flex justify-center items-center hocus:no-underline mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
 export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
