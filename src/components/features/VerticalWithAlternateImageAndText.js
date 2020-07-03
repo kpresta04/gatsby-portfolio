@@ -18,7 +18,7 @@ const Content = tw.div`mt-16`
 
 const ShadowBox = tw.div`shadow-lg p-10 rounded-lg`
 
-const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer bg-gray-800 hocus:bg-gray-600 rounded-full text-white text-lg `
+const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer hocus:bg-gray-600! rounded-full text-white text-lg `
 
 const Card = styled.div(props => [
   tw`mt-24 lg:mt-48 xl:mt-24 md:flex justify-center flex-wrap xl:mb-56`,
@@ -26,10 +26,19 @@ const Card = styled.div(props => [
 ])
 const ImageDiv = styled.div(props => [
   tw`relative rounded md:w-8/12 lg:w-5/12 flex-shrink-0 lg:mx-6 bg-cover bg-center`,
+
+  // `&:hover{
+  //   opacity:0;
+  // }`,
 ])
-const Details = tw.div`mt-0  md:w-8/12 lg:w-5/12 shadow-lg pb-12  rounded-lg`
+const Details = styled.div(props => [
+  tw`mt-0  md:w-8/12 lg:w-5/12 shadow-lg pb-12 rounded-lg transition-all duration-200`,
+  `&:hover{
+    transform: translateY(-1rem);
+}`,
+])
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`
-const Title = tw.h4`text-4xl font-bold text-white  m-0 text-center pt-12 lg:pt-8 xl:pt-12 pb-4`
+const Title = tw.h4`text-4xl font-bold text-white  m-0 text-center pt-12 lg:pt-8 xl:pt-12 pb-8 px-8`
 const Description = tw.p`mt-2 text-base leading-loose p-8`
 const Link = tw.a`flex justify-center items-center hocus:no-underline mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`
 
@@ -38,11 +47,13 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
     {
       imageSrc: crImage.childImageSharp.fluid,
       subtitle: "Paid",
-      title: "Casino Royale",
+      title: "Casino Web App",
       description:
         "A casino web app, built in MERN with Redux and Firebase. Buy chips and try to beat the house! Implemented Blackjack and Slots.",
       url: "https://casino-royale-9c472.web.app/",
       gitHubLink: "https://github.com/kpresta04/casino-royale",
+      // bgColor: "rgb(33, 87, 168)",
+      bgColor: "rgb(26, 46, 75)",
     },
     {
       imageSrc: simmonsImage.childImageSharp.fluid,
@@ -52,6 +63,9 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
         "E-commerce freelance project commissioned by a local business. Features a custom storefront with Shopify headless CMS.",
       url: "https://peaceful-turing-1274a7.netlify.app/",
       gitHubLink: "https://github.com/kpresta04/simmons-gatsby",
+      // bgColor: "rgb(255, 4, 4)",
+      // bgColor: "rgb(0, 75, 98)",
+      bgColor: "rgb(80,127,177)",
     },
 
     {
@@ -62,6 +76,8 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
         "VanillaJS app for finding breweries in any area. Utilizes Mapbox with Foursquare API and Bulma CSS.",
       url: "https://kpresta04.github.io/beerme",
       gitHubLink: "https://github.com/kpresta04/beerme",
+      // bgColor: "rgb(73, 196, 255)",
+      bgColor: "rgb(26, 46, 75)",
     },
 
     {
@@ -72,6 +88,7 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
         "Web app for saving a list of your favorite books. Built in MERN with Redux and utilizes Google Books API.",
       url: "https://gbr-search.herokuapp.com/",
       gitHubLink: "https://github.com/kpresta04/google-books-react-search",
+      bgColor: "rgb(80,127,177)",
     },
   ]
   // console.log(crImage)
@@ -109,7 +126,7 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
                   style={{
                     borderRadius: "0.25rem",
                     clipPath: " polygon(0 0, 100% 0, 100% 85%, 0 100%)",
-                    background: "#2d3748",
+                    backgroundImage: `linear-gradient(to right bottom, ${card.bgColor}, #2d3748)`,
                   }}
                 >
                   {/* <ShadowBox> */}
@@ -128,6 +145,7 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
                   >
                     <ProjButton
                       style={{
+                        backgroundColor: `${card.bgColor}`,
                         transition: "all 233ms ease-in-out",
                         maxWidth: "12rem",
                       }}
@@ -149,6 +167,8 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
                   >
                     <ProjButton
                       style={{
+                        backgroundColor: `${card.bgColor}`,
+
                         transition: "all 233ms ease-in-out",
                         maxWidth: "12rem",
                       }}
