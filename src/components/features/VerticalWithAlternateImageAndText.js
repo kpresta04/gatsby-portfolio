@@ -18,7 +18,7 @@ const Content = tw.div`mt-16`
 
 const ShadowBox = tw.div`shadow-lg p-10 rounded-lg`
 
-const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer hocus:bg-gray-600! rounded-full text-white text-lg `
+const ProjButton = tw.button`w-11/12 uppercase mb-1 h-12 align-middle cursor-pointer font-bold hocus:bg-gray-600! rounded-full text-white text-lg `
 
 const Card = styled.div(props => [
   tw`mt-24 lg:mt-48 xl:mt-24 md:flex justify-center flex-wrap xl:mb-56`,
@@ -45,17 +45,6 @@ const Link = tw.a`flex justify-center items-center hocus:no-underline mt-4 text-
 export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
   const cards = [
     {
-      imageSrc: crImage.childImageSharp.fluid,
-      subtitle: "Paid",
-      title: "Casino Web App",
-      description:
-        "A casino web app, built in MERN with Redux and Firebase. Buy chips and try to beat the house! Implemented Blackjack and Slots.",
-      url: "https://casino-royale-9c472.web.app/",
-      gitHubLink: "https://github.com/kpresta04/casino-royale",
-      // bgColor: "rgb(33, 87, 168)",
-      bgColor: "rgb(26, 46, 75)",
-    },
-    {
       imageSrc: simmonsImage.childImageSharp.fluid,
       subtitle: "Paid",
       title: "Simmons Gun Repair",
@@ -65,18 +54,18 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
       gitHubLink: "https://github.com/kpresta04/simmons-gatsby",
       // bgColor: "rgb(255, 4, 4)",
       // bgColor: "rgb(0, 75, 98)",
-      bgColor: "rgb(80,127,177)",
+      // bgColor: "rgb(80,127,177)",
+      bgColor: "rgb(49, 106, 167)",
     },
-
     {
-      imageSrc: beerMeImage.childImageSharp.fluid,
-      subtitle: "Free",
-      title: "Brewery Finder",
+      imageSrc: crImage.childImageSharp.fluid,
+      subtitle: "Paid",
+      title: "Casino Web App",
       description:
-        "VanillaJS app for finding breweries in any area. Utilizes Mapbox with Foursquare API and Bulma CSS.",
-      url: "https://kpresta04.github.io/beerme",
-      gitHubLink: "https://github.com/kpresta04/beerme",
-      // bgColor: "rgb(73, 196, 255)",
+        "A casino web app, built in MERN with Redux and Firebase. Buy chips and try to beat the house! Implemented Blackjack and Slots.",
+      url: "https://casino-royale-9c472.web.app/",
+      gitHubLink: "https://github.com/kpresta04/casino-royale",
+      // bgColor: "rgb(33, 87, 168)",
       bgColor: "rgb(26, 46, 75)",
     },
 
@@ -89,6 +78,17 @@ export default ({ crImage, beerMeImage, gbsImage, simmonsImage }) => {
       url: "https://gbr-search.herokuapp.com/",
       gitHubLink: "https://github.com/kpresta04/google-books-react-search",
       bgColor: "rgb(80,127,177)",
+    },
+    {
+      imageSrc: beerMeImage.childImageSharp.fluid,
+      subtitle: "Free",
+      title: "Brewery Finder",
+      description:
+        "VanillaJS app for finding breweries in any area. Utilizes Mapbox with Foursquare API and Bulma CSS.",
+      url: "https://kpresta04.github.io/beerme",
+      gitHubLink: "https://github.com/kpresta04/beerme",
+      // bgColor: "rgb(73, 196, 255)",
+      bgColor: "rgb(26, 46, 75)",
     },
   ]
   // console.log(crImage)

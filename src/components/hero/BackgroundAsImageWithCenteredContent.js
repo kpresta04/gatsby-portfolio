@@ -42,7 +42,7 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-lg! md:text-xl
 export default ({ bgImage }) => {
   const Container = styled.div`
     ${tw`relative -mx-8! -mt-8 bg-center bg-cover h-screen min-h-144`}
-    background-image: url(${bgImage.childImageSharp.fluid.srcWebp});
+    background-image: url(${bgImage.childImageSharp.fluid.src});
   `
 
   const navLinks = [

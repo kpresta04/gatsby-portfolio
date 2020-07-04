@@ -76,6 +76,7 @@ export default () => {
                         id="name-input"
                         type="text"
                         name="name"
+                        label="name"
                         placeholder="Name"
                       />
                     </InputContainer>
@@ -87,6 +88,7 @@ export default () => {
                         id="email-input"
                         type="email"
                         name="email"
+                        label="email"
                         placeholder="email@mail.com"
                       />
                     </InputContainer>
@@ -95,6 +97,7 @@ export default () => {
                     <InputContainer tw="flex-1">
                       <Label htmlFor="name-input">Your Message</Label>
                       <TextArea
+                        label="message"
                         required
                         style={{ minWidth: "300px" }}
                         id="message-input"

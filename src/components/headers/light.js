@@ -141,6 +141,7 @@ export default ({
           {links}
         </MobileNavLinks>
         <NavToggle
+          aria-label="Menu Toggle"
           onClick={toggleNavbar}
           className={showNavLinks ? "open" : "closed"}
         >

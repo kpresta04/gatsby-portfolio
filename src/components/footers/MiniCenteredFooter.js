@@ -16,7 +16,7 @@ const LogoContainer = tw.div`flex items-center justify-center md:justify-start`
 const LogoImg = tw.img`w-8`
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`
 
-const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
+const LinksContainer = tw.div`mt-8 font-medium md:flex flex-wrap justify-center items-center flex-col sm:flex-row`
 const InternalLink = tw(
   Link
 )`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`
@@ -51,6 +51,7 @@ export default () => {
               href="https://www.linkedin.com/in/kellen-presta/"
             >
               <LinkedInIcon />
+              <span style={{ display: "none" }}>Linked in</span>
             </SocialLink>
             <SocialLink
               rel="noopener"
@@ -58,6 +59,7 @@ export default () => {
               href="https://github.com/kpresta04"
             >
               <GitHubIcon />
+              <span style={{ display: "none" }}>Github</span>
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
