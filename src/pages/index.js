@@ -44,12 +44,12 @@ export const query = graphql`
         }
       }
     }
-    simmonsImage: file(relativePath: { eq: "simmons2.png" }) {
+    simmonsImage: file(relativePath: { eq: "simmons3.png" }) {
       childImageSharp {
         fluid(
           quality: 100
           cropFocus: CENTER
-          maxWidth: 1400
+          maxWidth: 1450
           maxHeight: 900
           webpQuality: 100
         ) {
