@@ -101,7 +101,7 @@ export const query = graphql`
   }
 `
 export default ({ data }) => (
-  <AnimationRevealPage disabled>
+  <AnimationRevealPage>
     <Helmet>
       <meta charSet="utf-8" />
       <title>Kellen Presta</title>
