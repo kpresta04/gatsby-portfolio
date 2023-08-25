@@ -67,7 +67,7 @@ export default ({ crypto, iot, web_dev, network }) => {
       // imageSrc:
       //   "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Event Tips",
-      title: "Front End",
+      // title: "Front End",
       url: "https://timerse.com",
     },
     {
@@ -78,18 +78,18 @@ export default ({ crypto, iot, web_dev, network }) => {
       // imageSrc:
       //   "https://images.unsplash.com/photo-1543365067-fa127bcb2303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
       category: "Reviews",
-      title: "Back End",
+      // title: "Back End",
       url: "https://reddit.com",
     },
     {
       imageName: "iot.jpg",
       imageSrc: iot.childImageSharp.fixed.src,
-      skillTitles: ["GraphQL", "PostgreSQL", "MySQL", "MongoDB", "Jest"],
+      skillTitles: ["GraphQL", "PostgreSQL", "MySQL", "Nextjs", "Jest"],
 
       // imageSrc:
       //   "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
       category: "Discover",
-      title: "Database",
+      // title: "Database",
       url: "https://timerse.com",
     },
     {
